@@ -11,6 +11,7 @@
 }
 
 body {
+    width: 100vw;
     font-family: 'Arial', sans-serif;
     -webkit-font-smoothing: antialiased;
     background: #fff;
@@ -33,11 +34,24 @@ img {
     width: 100%;
 }
 
+section {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+ul {
+    list-style: none;
+}
 
 /* Header */
 
 header {
-    width: 100vw;
+    width: 100%;
     min-height: 10vh;
     background: #000;
     position: relative;
@@ -74,9 +88,6 @@ header {
     height: 80vh;
     background: var(--primary-color) url("../img/hero-bckgr.jpg") no-repeat top center/cover;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
 }
 
@@ -94,9 +105,7 @@ header {
 /* Homepage */
 
 .homepage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     position: relative;
 }
 
@@ -108,25 +117,188 @@ header {
     bottom: 0;
     left: 0;
     background: url('../img/divider-up-02.png') no-repeat center bottom;
-
 }
 
 .homepage-infoContent {
     width: 100%;
 }
 
-.homepage-infoContent-title {
-    font-size: 25px;
-    font-weight: bold;
-    color: #111;
+/* Anywhere section */
+
+.anywhere {
+    width: 100%;
+    position: relative;
+}
+
+.anywhere::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    bottom: 0;
+    left: 0;
+    background: url('../img/divider-up-02.png') no-repeat center bottom;
+}
+
+.anywhere-list {
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.anywhere-list-element {
+    margin-bottom: 1rem;
+    font-weight: 100;
+}
+
+.anywhere-container {
+    width: 90%;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem 1rem;
+}
+
+.anywhere-img {
+    width: 100%;
+    box-shadow: 3px 3px 4px #ddd, -3px -3px 8px #ddd;
+}
+
+.anywhere-img-header {
+    width: 100%;
+    height: 1.2rem;
+    background: #eee;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    padding: 1px 5px;
+}
+
+.anywhere-img-header-dot {
+    width: .2rem;
+    height: .2rem;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.anywhere-img img {
+    width: 100%;
+}
+
+/* Protect section */
+.protect {
+    width: 100%;
+    height: 60vh;
+    background: #eee url('../img/hero-memories-03.jpg') no-repeat center top;
+}
+
+/* Create section */
+.create {
+    width: 100%;
+    height: 90vh;
+    color: #ffffff;
+    background: #eee url('../img/hero-experience-08.jpg') no-repeat center left/cover;
+}
+
+.create-list {
     margin-top: 1rem;
 }
 
-.homepage-infoContent-text {
-    font-size: 14px;
-    line-height: 2;
-    color: #222;
-    margin: 1rem;
+.create-list-element {
+    margin: 1.75rem 0 0.5rem 0;
+    display: inline-block;
+}
+
+.create-list-element i {
+    border: 2px solid #fff;
+    border-radius: 100%;
+    padding: 1rem;
+    display: inline-block;
+}
+
+.create-list-element p {
+    width: 75%;
+    padding-left: 1rem;
+    text-align: left;
+    display: inline-block;
+}
+
+/* Posibilities section */
+
+.posibilities {
+    width: 100%;
+    background: #eee;
+}
+
+.posibilities-pro,
+.posibilities-rookie {
+    width: 100%;
+    position: relative;
+    margin-top: 5rem;
+}
+
+.posibilities-pro::before,
+.posibilities-rookie::before {
+    width: 100%;
+    content: '';
+    width: 130px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.posibilities-pro::before {
+    background: url('../img/homepage-10.png') no-repeat -10px -542px;
+    top: -8%;
+}
+
+.posibilities-rookie::before {
+    background: url('../img/homepage-10.png') no-repeat -143px -542px;
+    top: 0;
+}
+
+/* Upload Section */
+
+.upload {
+    width: 100%;
+}
+
+.upload-icons {}
+
+.upload-icons-appStore {
+    width: 163px;
+    height: 52px;
+    float: left;
+    text-indent: -4515px;
+    background: url('../img/homepage-10.png') no-repeat -10px -674px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.upload-icons-googlePlay {
+    width: 163px;
+    height: 52px;
+    float: left;
+    text-indent: -4515px;
+    background: url('../img/homepage-10.png') no-repeat -182px -674px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+/* Dots */
+
+.red {
+    background: red;
+}
+
+.orange {
+    background: yellow;
+}
+
+.green {
+    background: green;
 }
 
 /* Container */
@@ -134,17 +306,16 @@ header {
 .container {
     width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: hidden;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 /* Text Styles */
 
 .text-xl {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
 }
 
@@ -165,6 +336,37 @@ header {
 
 .text-center {
     text-align: center;
+}
+
+.text-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #111;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.text-description {
+    font-size: 16px;
+    line-height: 2;
+    color: #222;
+    margin: 0.75rem auto;
+}
+
+.text-dark {
+    color: #000;
+}
+
+.text-blue {
+    color: var(--primary-color);
+}
+
+.text-light {
+    font-weight: 100;
+}
+
+.text-bold {
+    font-weight: bold;
 }
 
 
