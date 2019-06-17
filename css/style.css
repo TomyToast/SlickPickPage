@@ -10,6 +10,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     /* width: 100vw; */
     font-family: 'Arial', sans-serif;
@@ -40,8 +44,8 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 5rem;
-    padding-top: 5rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
 }
 
 ul {
@@ -421,14 +425,15 @@ header {
 
 /* Create section */
 .create {
-    width: 100%;
+    /* width: 100%; */
     height: 90vh;
     color: #ffffff;
     background: #eee url('../img/hero-experience-08.jpg') no-repeat center left/cover;
 }
 
 .create-header {
-    margin: -1.5rem 0 1.5rem 0;
+    font-size: 2.3rem;
+    margin: -0rem 2rem 1.5rem 0;
 }
 
 .create-list {
