@@ -5,5 +5,5 @@
     - HTML
     - CSS
 
-### [Live]()
+### [Live](https://tomytoast.github.io/SlickPickPage/)
 
