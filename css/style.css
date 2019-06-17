@@ -633,9 +633,9 @@ header {
     .upload-iphone {
         display: block;
         width: 50%;
-        height: 100vh;
+        height: 70vh;
         align-self: flex-start;
-        background: url('../img/homepage-jpg-10.jpg') no-repeat 25px -627px;
+        background: url('../img/homepage-jpg-10.jpg') no-repeat 25px -607px;
         position: absolute;
         top: 30%;
         left: 0;
@@ -645,7 +645,7 @@ header {
     .upload-screen {
         display: block;
         width: 50%;
-        height: 100vh;
+        height: 90vh;
         align-self: flex-end;
         background: url('../img/homepage-jpg-10.jpg') no-repeat 0 -100px;
     }
