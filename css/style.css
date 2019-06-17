@@ -645,7 +645,7 @@ header {
     .upload-screen {
         display: block;
         width: 50%;
-        height: 90vh;
+        height: 70vh;
         align-self: flex-end;
         background: url('../img/homepage-jpg-10.jpg') no-repeat 0 -100px;
     }
