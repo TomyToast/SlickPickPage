@@ -61,6 +61,9 @@ header {
     background: #000;
     position: relative;
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 9;
 }
 
 .nav {
@@ -70,10 +73,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding: 1rem;
-    position: absolute;
-    top: 0;
-    left: 0;
+    padding: 1rem 2rem;
 }
 
 .nav a {
@@ -140,7 +140,7 @@ header {
 
 .hero-btn {
     width: 16rem;
-    height: 2rem;
+    height: 3rem;
     padding: 1rem 0;
     text-align: center;
     font-size: 1rem;
@@ -472,7 +472,6 @@ header {
         background: #fff url('../img/hero-everyone-06.jpg') no-repeat left/cover;
         background-position: -25rem 5rem;
         background-size: 60%;
-        /* position: relative; */
         align-items: flex-end;
         padding-right: 10rem;
     }
@@ -635,7 +634,7 @@ header {
         position: absolute;
         top: 30%;
         left: 0;
-        z-index: -1;
+        /* z-index: -1; */
     }
 
     .upload-screen {
@@ -657,6 +656,8 @@ header {
 /* Spec Section */
 
 .spec {
+    width: 100vw;
+    height: 100%;
     position: relative;
 }
 
@@ -668,6 +669,10 @@ header {
     bottom: 0;
     left: 0;
     background: url('../img/divider-up-02.png') no-repeat center bottom;
+}
+
+.spec-slider {
+    display: none;
 }
 
 .spec-element {
@@ -685,7 +690,7 @@ header {
 }
 
 .spec-element-img {
-    width: 30%;
+    display: inline-block;
     margin-right: 2rem;
 }
 
@@ -693,31 +698,56 @@ header {
     width: 93px;
     height: 82px;
     background: #ddd url('../img/homepage-10.png') -407px -543px;
+    display: inline-block;
 }
 
 .spec-element-img-2 {
     width: 127px;
     height: 99px;
     background: #ddd url('../img/homepage-10.png') -355px -627px;
+    display: inline-block;
 }
 
 .spec-element-img-3 {
     width: 105px;
     height: 90px;
     background: #ddd url('../img/homepage-10.png') -9px -734px;
+    display: inline-block;
 }
 
 .spec-element-img-4 {
     width: 120px;
     height: 72px;
     background: #ddd url('../img/homepage-10.png') -282px -542px;
+    display: inline-block;
+}
+
+@media(min-width: 1200px) {
+    .spec {
+        flex-direction: row;
+    }
+
+    .spec>.container {
+        width: 50%;
+    }
+
+    .spec-slider {
+        width: 534px;
+        height: 693px;
+        display: block;
+        background: url('../img/homepage-jpg-10.jpg') no-repeat 0 -1902px;
+    }
 }
 
 /* Features section */
 
 .features {
-    height: 50vh;
+    height: 100%;
     position: relative;
+}
+
+.features-slider {
+    display: none;
 }
 
 .features::after {
@@ -728,6 +758,17 @@ header {
     bottom: 0;
     left: 0;
     background: url('../img/divider-up-02.png') no-repeat center bottom;
+}
+
+@media(min-width: 1200px) {
+    .features-slider {
+        width: 892px;
+        height: 657px;
+        display: block;
+        /* position: relative; */
+        /* margin: 20px auto 0; */
+        background: url('../img/homepage-jpg-10.jpg') no-repeat 0 -1216px;
+    }
 }
 
 /* Mosaic Section */
@@ -826,7 +867,7 @@ header {
 /* Text Styles */
 
 .text-xl {
-    font-size: 1.75rem;
+    font-size: 2.75rem;
     margin-bottom: 1rem;
 }
 
@@ -899,12 +940,12 @@ header {
 
 .btn-start {
     background: var(--primary-color);
-    padding: 1rem 0;
+    padding: .5rem 0;
 }
 
 .btn-mosaic {
     background: var(--primary-color);
-    width: 70%;
+    width: 30%;
     height: 3rem;
     color: #fff;
     font-size: 1rem;
